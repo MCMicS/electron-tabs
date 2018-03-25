@@ -37,6 +37,8 @@ class TabGroup extends EventEmitter {
             closeButtonText: args.closeButtonText || "&#10006;",
             newTab: args.newTab,
             newTabButtonText: args.newTabButtonText || "&#65291;",
+            leftTabButtonText: args.leftTabButtonText || "&#65308;",
+            rightTabButtonText: args.newTabButtonText || "&#65310;",
             ready: args.ready
         };
         this.tabContainer = document.querySelector(options.tabContainerSelector);

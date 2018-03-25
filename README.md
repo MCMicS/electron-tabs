@@ -68,6 +68,8 @@ Represents the main tab container.
 * `viewClass` (default: `"etabs-view"`): class to add to webview elements.
 * `closeButtonText` (default: `"&#10006;"`): "close tab" button text.
 * `newTabButtonText` (default: `"&#65291;"`): "New Tab" button text.
+*  `leftTabButtonText` (default: `"&#65308;"`): "left Tab" button text.
+*  `rightTabButtonText` (default: `"&#65310;"`): "right Tab" button text.
 * `newTab` (default: `undefined`): arguments to use when `.addTab()` is called without parameters. It can be an object or a function which returns an object. It determines the options to use when the "New Tab" button is triggered. If you leave it undefined then the "New Tab" button won't be displayed.
 * `ready` (default: `undefined`): a callback function to call once the tab group is ready. The `TabGroup` instance is passed as the only parameter.
 
