@@ -7,9 +7,17 @@
     font-size: 14px;
     -webkit-user-select: none;
     user-select: none;
+    display: flex;
 }
 
 .etabs-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+}
+.etabs-tabs::-webkit-scrollbar {
+    display: none;
 }
 
 .etabs-tab {
@@ -26,6 +34,7 @@
     font-size: 14px;
     background-color: #ccc;
     cursor: default;
+    flex: 0 0 auto;
 }
 
 /* Dragula */
@@ -51,7 +60,7 @@
 }
 
 .etabs-buttons {
-    float: left;
+    flex: 0 0 auto;
 }
 
 .etabs-buttons button {

@@ -37,6 +37,7 @@ class TabGroup extends EventEmitter {
             closeButtonText: args.closeButtonText || "&#10006;",
             newTab: args.newTab,
             newTabButtonText: args.newTabButtonText || "&#65291;",
+            showTabsButtonText: args.showTabsButtonText || "&#8744;",
             leftTabButtonText: args.leftTabButtonText || "&#65308;",
             rightTabButtonText: args.newTabButtonText || "&#65310;",
             ready: args.ready
@@ -46,6 +47,7 @@ class TabGroup extends EventEmitter {
         this.tabs = [];
         this.newTabId = 0;
         TabGroupPrivate.initNewTabButton.bind(this)();
+        TabGroupPrivate.initShowAllTabsButton.bind(this)();
         if (typeof this.options.ready === "function") {
             this.options.ready(this);
         }
@@ -125,6 +127,13 @@ const TabGroupPrivate = {
         button.classList.add(`${this.options.tabClass}-button-new`);
         button.innerHTML = this.options.newTabButtonText;
         button.addEventListener("click", this.addTab.bind(this, undefined), false);
+    },
+    initShowAllTabsButton: function () {
+        let container = document.querySelector(this.options.buttonsContainerSelector);
+        let button = container.appendChild(document.createElement("button"));
+        button.classList.add(`${this.options.tabClass}-button-show`);
+        button.innerHTML = this.options.showTabsButtonText;
+        // button.addEventListener("click", this.addTab.bind(this, undefined), false);
     },
 
     removeTab: function (tab, triggerEvent) {
