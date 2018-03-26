@@ -24,7 +24,7 @@
     display: none;
     position: relative;
     color: #333;
-    height: 22px;
+    height: 32px;
     padding: 6px 8px 4px;
     border: 1px solid #aaa;
     border-bottom: none;
@@ -35,6 +35,7 @@
     background-color: #ccc;
     cursor: default;
     flex: 0 0 auto;
+    box-sizing: border-box;
 }
 
 /* Dragula */
